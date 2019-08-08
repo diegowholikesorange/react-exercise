@@ -10,7 +10,6 @@ import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import InboxIcon from '@material-ui/icons/Inbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
 
 const styles = makeStyles((theme: Theme) =>
     createStyles({
@@ -26,6 +25,7 @@ const styles = makeStyles((theme: Theme) =>
 
 interface UnicornSectionProps {
     title: string
+    unicorns: string[]
 }
 
 const unicornSection: React.FC<UnicornSectionProps> = (props)  => {
@@ -37,28 +37,27 @@ const unicornSection: React.FC<UnicornSectionProps> = (props)  => {
             <ExpansionPanelSummary
                 expandIcon={<ExpandMoreIcon />}
                 aria-controls="panel1a-content"
-                id="panel1a-header"
+                id="unicorn-header"
             >
                 <Typography className={classes.heading}>{props.title}</Typography>
             </ExpansionPanelSummary>
             <ExpansionPanelDetails>
                 <List component="nav" aria-label="main mailbox folders">
-                    <ListItem button>
-                        <ListItemIcon>
-                            <InboxIcon/>
-                        </ListItemIcon>
-                        <ListItemText primary="Inbox" />
-                    </ListItem>
-                    <ListItem button>
-                        <ListItemIcon>
-                            <InboxIcon />
-                        </ListItemIcon>
-                        <ListItemText primary="Drafts" />
-                    </ListItem>
+
+                    {props.unicorns.map((unicorn) =>
+                        <ListItem button key={unicorn}>
+                            <ListItemIcon>
+                                <InboxIcon/>
+                            </ListItemIcon>
+                            <ListItemText primary={unicorn} />
+                        </ListItem>
+                    )}
+
                 </List>
+
             </ExpansionPanelDetails>
         </ExpansionPanel>
     )
 
-}
+};
 export default unicornSection;
