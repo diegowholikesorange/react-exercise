@@ -1,6 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 
+## To Do
+- add top margin to content panel
+- automatically generate UUIDs for keys in unicorn list 
+- replace the inbox icon in the unicorn list with a groovier image
+
+
 ## Extra Packages
 We used the following extra packages:
 ```
