@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+
+## Extra Packages
+We used the following extra packages:
+```
+npm install sass --save
+npm install material-table --save
+```
+
 ## Available Scripts
 
 In the project directory, you can run:
