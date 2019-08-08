@@ -1,5 +1,5 @@
 const bundle = {
-    title: "Learn React!"
+    unicornSectionTitle: "Unicorn Section"
 };
 
 export default bundle;
